@@ -1,0 +1,40 @@
+html{
+    font-family: Helvetica;
+}
+.headL ,.headR{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    width: 25%;
+    height: 80px;  
+    float: left; 
+}
+.headM{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    width: 50%;
+    height: 80px;
+    text-align: center;
+    float: left;
+}
+main{
+    background-color: rgb(224, 255, 255);
+    padding: 40px;
+}
+.secL ,.secR{
+    background-color: rgb(70, 130, 180);
+    width: 50%;
+    height: 200px;
+    text-align: center;
+    float: left;
+}
+footer{
+    background-color: rgb(224, 255, 255);
+}
+table, .tbh{
+    border: 1px;
+    border-color: blue;
+}
+.tbh{
+    background-color: blue;
+    color: white;
+}
