@@ -1,0 +1,28 @@
+html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+header,footer{
+    background-color: #4BA3C7;
+    color: white;
+    height: 80px;
+    font-size: 120%;
+}
+section{
+    float: left;
+}
+#leftSec,#rightSec{
+    background-color: #EFEFEF;
+    height: 400px;
+    width: 25%;
+}
+#midSec{
+    background-color: #90CAF9;
+    height: 400px;
+    width: 50%;
+}
+th{
+    padding: 5px;
+    outline: 1px;
+    color: #90CAF9;
+}
