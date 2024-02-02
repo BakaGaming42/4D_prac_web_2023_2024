@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border-style: solid; border-radius: 1px;}
+    </style>
+</head>
+<body>
+    <div id="wynik"></div>
+    <div id="wynik2"></div>
+    <div id="wynik3"></div>
+
+    <table id="tab">
+        
+    </table>
+
+    <div id="opis"></div>
+</body>
+<script>
+    //1
+    console.log("Witaj świecie");
+    //2
+    let zmienna = 12;
+    console.log(typeof zmienna);
+    zmienna = "Język Java Script";
+    console.log(typeof zmienna);
+    //3
+    let a = 21;
+    let b = 17;
+    let wynik = a + b;
+    alert(wynik)
+    //4
+    //prompt()
+    //5
+    let a2 = 15;
+    let b2 = 5;
+    let wynik2 = a2 + b2;
+    document.getElementById("wynik").innerHTML = "wynik: " + wynik2;
+    //6
+    let a3 = 75;
+    let b3 = 123;
+    let wynik3 = a3 + b3;
+    document.getElementById("wynik2").innerHTML = "<h1>" + wynik3 + "</h1>";
+    //7
+    //$(`zmienna`);
+    
+    //8
+    let text = 0;
+    for(let i=1; i<101;i++)
+    {
+        if(i == 1)
+        {
+            text = "1";
+        }
+        else
+        {
+            text = text + ", " + i;
+        }
+        document.getElementById("wynik3").innerHTML = text;
+    }
+    //9
+    for(let i = 1; i < 10; i++)
+    {
+        let PoT = i*i;
+        if(i==1)
+        {
+            text ="</tr>" + "<td>" + i + "</td>" + "<td>" + PoT +"</td>"+"</tr>"; 
+        }
+        else
+        {
+            text = text + "</tr>" + "<td>" + i + "</td>" + "<td>" + PoT +"</td>"+"</tr>"; 
+        }
+        document.getElementById("tab").innerHTML = text;
+    }
+    //10
+    let liczba = Math.round(Math.random()*101) * (Math.round(Math.random()) ? 1: -1);
+    if(liczba > 0)
+    {
+        document.getElementById("opis").innerHTML = liczba + " - Liczba jest większa od zera.";
+    }
+    else
+    {
+        document.getElementById("opis").innerHTML = liczba + " - Zero lub liczba ujemna.";
+    }
+</script>
+</html>
