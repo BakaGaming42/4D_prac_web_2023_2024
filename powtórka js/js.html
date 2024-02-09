@@ -18,6 +18,22 @@
     </table>
 
     <div id="opis"></div>
+    <div id="opis2"></div>
+    <div id="opis3"></div>
+    <h1>
+    <button onclick="Powitaj()" id="button">Powitaj!</button>
+    </h1>
+
+    <input id="wartoscSlider" type="range" min="0" max="100" onchange="update()">
+    <div id="aktualnaLiczba"></div>
+
+    <div id="przyciski">
+    </div>
+    <p id="komunikat"></p>
+
+    <button id="przycisk" ></button>
+    <div id="element_div" ></div>
+    <span id="element_span" ></span>
 </body>
 <script>
     //1
@@ -85,5 +101,43 @@
     {
         document.getElementById("opis").innerHTML = liczba + " - Zero lub liczba ujemna.";
     }
+    //11
+    let liczba2 = Math.round(Math.random()*101) * (Math.round(Math.random()) ? 1: -1);
+    let tresc = (liczba2 > 0) ? "dodatnia" : "0/ujemna";
+    document.getElementById("opis2").innerHTML = tresc;
+    //12
+    let liczba3 = Math.round(Math.random()*101) * (Math.round(Math.random()) ? 1: -1);
+    if(liczba3 > 0)
+    {
+        document.getElementById("opis3").innerHTML ="<h1>"+ liczba3 + " - Liczba jest większa od zera." + "</h1>";
+    }
+    else if (liczba3 < 0)
+    {
+        document.getElementById("opis3").innerHTML = liczba3 + " - Liczba ujemna.";
+    }
+    else
+    {
+        document.getElementById("opis3").innerHTML =" - Zero.";
+    }
+    //13
+    function Powitaj()
+    {
+        document.getElementById("button").replaceWith("Witaj świecie");
+    }
+    //14
+    function update()
+    {
+        const wartosc = document.getElementById("wartoscSlider");
+        document.getElementById("aktualnaLiczba").innerHTML = wartosc.value; 
+    }
+    //15
+    document.getElementById("przyciski").innerHTML = "<button onclick='komunikat()'> jeden </button>" + "<br>" 
+    + "<button onclick='komunikat()'> dwa </button>" + "<br>" + "<button onclick='komunikat()'> trzy </button>";
+    function komunikat()
+    {
+        document.getElementById("komunikat").innerHTML = "kliknąłeś na przycisk";
+    }
+    //16
+    //coś tu zapewne powstanie
 </script>
 </html>
